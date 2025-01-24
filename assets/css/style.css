@@ -1,0 +1,108 @@
+/* BW Language Switcher Styles */
+
+#bw-language-switcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+
+}
+
+#bw-language-switcher .current-language {
+    cursor: default;
+}
+#bw-language-switcher .current-language span {
+    display: none;
+}
+
+#bw-language-switcher .language-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#bw-language-switcher .language-list a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 5px;
+}
+
+#bw-language-switcher .language-list.hidden {
+    display: none;
+}
+
+/* Flag styles */
+[class*="flag-"]>img {
+    width: 32px;
+    height: 20px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Popup */
+#bw-language-switcher {
+    position: relative;
+}
+#bw-language-switcher .language-list {
+    position: absolute;
+    margin-top: 2em;
+    border: solid 1px #434242;
+    border-radius: 10px;
+    padding: 10px;
+    background: #fff;
+}
+
+#bw-language-switcher .language-list:after, #bw-language-switcher .language-list:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#bw-language-switcher .language-list:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 10px;
+	margin-left: -10px;
+}
+#bw-language-switcher .language-list:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-bottom-color: #434242;
+	border-width: 11px;
+	margin-left: -11px;
+}
+
+
+
+
+/* popup-layout */
+
+.language-list:not([class*=text]) .lang-name {
+    text-indent: -999px;
+    overflow:hidden;
+    display: block;
+}
+.language-list span {
+    white-space: nowrap;
+    display: block;
+}
+
+/*text-flag*/
+.language-list.layout-text-flag {
+    flex-direction: column;
+} 
+.language-list.layout-text-flag a{
+    display: flex;
+    padding:2px; 
+} 
+.language-list.layout-text-flag .lang-img{
+ margin-right: .5em;   
+}
+.language-list.layout-flag-text .lang-img{
+ margin-left: .5em;   
+}
